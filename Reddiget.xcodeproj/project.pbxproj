@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4B261CA05C009A7EA9 /* AppDelegate.swift */; };
 		8D4AED4E261CA05C009A7EA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4D261CA05C009A7EA9 /* SceneDelegate.swift */; };
-		8D4AED50261CA05C009A7EA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4F261CA05C009A7EA9 /* ViewController.swift */; };
+		8D4AED50261CA05C009A7EA9 /* TopEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4F261CA05C009A7EA9 /* TopEntriesViewController.swift */; };
 		8D4AED53261CA05C009A7EA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AED51261CA05C009A7EA9 /* Main.storyboard */; };
 		8D4AED55261CA05E009A7EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AED54261CA05E009A7EA9 /* Assets.xcassets */; };
 		8D4AED58261CA05E009A7EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AED56261CA05E009A7EA9 /* LaunchScreen.storyboard */; };
 		8D4AED63261CA05E009A7EA9 /* ReddigetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED62261CA05E009A7EA9 /* ReddigetTests.swift */; };
 		8D4AED6E261CA05E009A7EA9 /* ReddigetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED6D261CA05E009A7EA9 /* ReddigetUITests.swift */; };
+		8D4CFF8C261DF2BD008757AA /* RedditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CFF8B261DF2BD008757AA /* RedditService.swift */; };
+		8D4CFF91261DF90F008757AA /* RedditData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CFF90261DF90F008757AA /* RedditData.swift */; };
+		8D4CFF96261DFCB2008757AA /* TopEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4CFF95261DFCB2008757AA /* TopEntriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		8D4AED48261CA05C009A7EA9 /* Reddiget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddiget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4AED4B261CA05C009A7EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D4AED4D261CA05C009A7EA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8D4AED4F261CA05C009A7EA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D4AED4F261CA05C009A7EA9 /* TopEntriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntriesViewController.swift; sourceTree = "<group>"; };
 		8D4AED52261CA05C009A7EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D4AED54261CA05E009A7EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D4AED57261CA05E009A7EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		8D4AED69261CA05E009A7EA9 /* ReddigetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReddigetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4AED6D261CA05E009A7EA9 /* ReddigetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReddigetUITests.swift; sourceTree = "<group>"; };
 		8D4AED6F261CA05E009A7EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4CFF8B261DF2BD008757AA /* RedditService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditService.swift; sourceTree = "<group>"; };
+		8D4CFF90261DF90F008757AA /* RedditData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditData.swift; sourceTree = "<group>"; };
+		8D4CFF95261DFCB2008757AA /* TopEntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopEntriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +140,7 @@
 		8D4AED7E261CA392009A7EA9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D4AED4F261CA05C009A7EA9 /* ViewController.swift */,
+				8D4AED4F261CA05C009A7EA9 /* TopEntriesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 		8D4AED7F261CA398009A7EA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8D4CFF90261DF90F008757AA /* RedditData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +156,7 @@
 		8D4AED80261CA39D009A7EA9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8D4CFF8B261DF2BD008757AA /* RedditService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -172,6 +180,7 @@
 		8D4AED83261CA3B2009A7EA9 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				8D4CFF95261DFCB2008757AA /* TopEntriesViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -306,9 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D4AED50261CA05C009A7EA9 /* ViewController.swift in Sources */,
+				8D4AED50261CA05C009A7EA9 /* TopEntriesViewController.swift in Sources */,
+				8D4CFF96261DFCB2008757AA /* TopEntriesViewModel.swift in Sources */,
 				8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */,
 				8D4AED4E261CA05C009A7EA9 /* SceneDelegate.swift in Sources */,
+				8D4CFF8C261DF2BD008757AA /* RedditService.swift in Sources */,
+				8D4CFF91261DF90F008757AA /* RedditData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

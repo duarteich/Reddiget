@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,16 +11,45 @@
         <!--Top Entries View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TopEntriesViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TopEntriesViewController" customModule="Reddiget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2zr-Xh-Gyh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="780"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jU1-rq-uZp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uce-xc-d55"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErO-e6-zGb">
+                                <rect key="frame" x="169.5" y="832" width="75" height="30"/>
+                                <state key="normal" title="Dismiss All"/>
+                                <connections>
+                                    <action selector="dismissAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjZ-vB-9eU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ErO-e6-zGb" firstAttribute="top" secondItem="2zr-Xh-Gyh" secondAttribute="bottom" constant="8" symbolic="YES" id="0zg-cx-Dq8"/>
+                            <constraint firstItem="2zr-Xh-Gyh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E2T-qM-252"/>
+                            <constraint firstItem="2zr-Xh-Gyh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OFc-i4-OZO"/>
+                            <constraint firstItem="ErO-e6-zGb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YK0-sg-LAn"/>
+                            <constraint firstItem="ErO-e6-zGb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dAD-qk-PhG"/>
+                            <constraint firstItem="2zr-Xh-Gyh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ghn-FF-6LD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="2zr-Xh-Gyh" id="vt6-Fn-BSN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="18.75"/>
         </scene>
     </scenes>
     <resources>

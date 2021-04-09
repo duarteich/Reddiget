@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2938EA261F3F6000A91741 /* EntryCell.swift */; };
+		8D2938ED261F3F6000A91741 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2938EB261F3F6000A91741 /* EntryCell.xib */; };
 		8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4B261CA05C009A7EA9 /* AppDelegate.swift */; };
 		8D4AED4E261CA05C009A7EA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4D261CA05C009A7EA9 /* SceneDelegate.swift */; };
 		8D4AED50261CA05C009A7EA9 /* TopEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4F261CA05C009A7EA9 /* TopEntriesViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D2938EA261F3F6000A91741 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
+		8D2938EB261F3F6000A91741 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		8D4AED48261CA05C009A7EA9 /* Reddiget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddiget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4AED4B261CA05C009A7EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D4AED4D261CA05C009A7EA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D2938E9261F3F2900A91741 /* EntryCell */ = {
+			isa = PBXGroup;
+			children = (
+				8D2938EA261F3F6000A91741 /* EntryCell.swift */,
+				8D2938EB261F3F6000A91741 /* EntryCell.xib */,
+			);
+			path = EntryCell;
+			sourceTree = "<group>";
+		};
 		8D4AED3F261CA05C009A7EA9 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 		8D4AED7E261CA392009A7EA9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D2938E9261F3F2900A91741 /* EntryCell */,
 				8D4AED4F261CA05C009A7EA9 /* TopEntriesViewController.swift */,
 			);
 			path = Controllers;
@@ -288,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D2938ED261F3F6000A91741 /* EntryCell.xib in Resources */,
 				8D4AED58261CA05E009A7EA9 /* LaunchScreen.storyboard in Resources */,
 				8D4AED55261CA05E009A7EA9 /* Assets.xcassets in Resources */,
 				8D4AED53261CA05C009A7EA9 /* Main.storyboard in Resources */,
@@ -319,6 +334,7 @@
 				8D4CFF96261DFCB2008757AA /* TopEntriesViewModel.swift in Sources */,
 				8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */,
 				8D4AED4E261CA05C009A7EA9 /* SceneDelegate.swift in Sources */,
+				8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */,
 				8D4CFF8C261DF2BD008757AA /* RedditService.swift in Sources */,
 				8D4CFF91261DF90F008757AA /* RedditData.swift in Sources */,
 			);

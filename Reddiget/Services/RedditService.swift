@@ -34,40 +34,41 @@ class RedditService {
         let url = urlBuilder.url!
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-          DispatchQueue.main.async {
-            guard error == nil else {
-              print("Failed request from Reddit: \(error!.localizedDescription)")
-              completion(nil, .failedRequest)
-              return
+            DispatchQueue.main.async {
+                guard error == nil else {
+                    print("Failed request from Reddit: \(error!.localizedDescription)")
+                    completion(nil, .failedRequest)
+                    return
+                }
+                
+                guard let data = data else {
+                    print("No data returned from Reddit")
+                    completion(nil, .noData)
+                    return
+                }
+                
+                guard let response = response as? HTTPURLResponse else {
+                    print("Unable to process Reddit response")
+                    completion(nil, .invalidResponse)
+                    return
+                }
+                
+                guard response.statusCode == 200 else {
+                    print("Failure response from Reddit: \(response.statusCode)")
+                    completion(nil, .failedRequest)
+                    return
+                }
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let redditData: RedditData = try decoder.decode(RedditData.self, from: data)
+                    completion(redditData, nil)
+                } catch {
+                    print("Unable to decode Reddit response: \(error.localizedDescription)")
+                    completion(nil, .invalidData)
+                }
             }
-            
-            guard let data = data else {
-              print("No data returned from Reddit")
-              completion(nil, .noData)
-              return
-            }
-            
-            guard let response = response as? HTTPURLResponse else {
-              print("Unable to process Reddit response")
-              completion(nil, .invalidResponse)
-              return
-            }
-            
-            guard response.statusCode == 200 else {
-              print("Failure response from Reddit: \(response.statusCode)")
-              completion(nil, .failedRequest)
-              return
-            }
-            
-            do {
-              let decoder = JSONDecoder()
-              let redditData: RedditData = try decoder.decode(RedditData.self, from: data)
-              completion(redditData, nil)
-            } catch {
-              print("Unable to decode Reddit response: \(error.localizedDescription)")
-              completion(nil, .invalidData)
-            }
-          }
         }.resume()
     }
 }

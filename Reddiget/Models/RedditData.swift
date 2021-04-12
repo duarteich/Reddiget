@@ -27,6 +27,6 @@ struct EntryData: Decodable {
     let author: String
     let created: TimeInterval
     let thumbnail: String
-    let num_comments: Int
+    let numComments: Int
     let visited: Bool
 }

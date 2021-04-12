@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D03E1202620892900C3E918 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D03E11F2620892900C3E918 /* Box.swift */; };
 		8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2938EA261F3F6000A91741 /* EntryCell.swift */; };
 		8D2938ED261F3F6000A91741 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2938EB261F3F6000A91741 /* EntryCell.xib */; };
 		8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4B261CA05C009A7EA9 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D03E11F2620892900C3E918 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		8D2938EA261F3F6000A91741 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		8D2938EB261F3F6000A91741 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		8D4AED48261CA05C009A7EA9 /* Reddiget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddiget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +189,7 @@
 		8D4AED82261CA3AC009A7EA9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8D03E11F2620892900C3E918 /* Box.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */,
 				8D4AED4E261CA05C009A7EA9 /* SceneDelegate.swift in Sources */,
 				8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */,
+				8D03E1202620892900C3E918 /* Box.swift in Sources */,
 				8D4CFF8C261DF2BD008757AA /* RedditService.swift in Sources */,
 				8D4CFF91261DF90F008757AA /* RedditData.swift in Sources */,
 			);

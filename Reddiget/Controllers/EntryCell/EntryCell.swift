@@ -21,16 +21,24 @@ class EntryCell: UITableViewCell {
         
     }
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //MARK: - Properties
+    static let identifier = "EntryCell"
+    
+    static func nib() -> UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
     
+    func setup(with entryData: EntryData) {
+        autorLabel.text = entryData.author
+        createdLabel.text = createdDateText(from: entryData.created)
+        titleLabel.text = entryData.title
+        commentsLabel.text =  entryData.numComments > 1 ? "\(entryData.numComments) comments" : "\(entryData.numComments) comment"
+    }
+    
+    func createdDateText(from timeInterval: TimeInterval) -> String {
+        let date = Date.init(timeIntervalSince1970: timeInterval)
+        let diffComponents = Calendar.current.dateComponents([.hour], from: date, to: Date())
+        guard let hours = diffComponents.hour else { return "" }
+        return hours > 1 ? "\(hours) hours ago" : "\(hours) hour ago"
+    }
 }

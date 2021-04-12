@@ -9,7 +9,13 @@ import Foundation
 
 public class TopEntriesViewModel {
     
-    func fetchTopEntries(after: String? = nil) {
+    let entries = Box([Entry]())
+    
+    init() {
+        fetchTopEntries()
+    }
+    
+    private func fetchTopEntries(after: String? = nil) {
         RedditService.topEntries(after: after) { [weak self] (redditData, error) in
             guard
               let self = self,
@@ -17,6 +23,7 @@ public class TopEntriesViewModel {
             else {
               return
             }
+            self.entries.value = redditData.data.children
         }
     }
 }

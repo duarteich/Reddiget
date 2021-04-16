@@ -10,6 +10,9 @@
 		8D03E1202620892900C3E918 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D03E11F2620892900C3E918 /* Box.swift */; };
 		8D18AC5F2629B92800F83B17 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18AC5E2629B92800F83B17 /* MainViewController.swift */; };
 		8D18AC642629BCD400F83B17 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18AC632629BCD400F83B17 /* EntryDetailViewController.swift */; };
+		8D18AC692629FBF600F83B17 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18AC682629FBF600F83B17 /* UIKit+Extensions.swift */; };
+		8D18AC6E2629FC7200F83B17 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18AC6D2629FC7200F83B17 /* ImageDownloader.swift */; };
+		8D18AC7C2629FE2700F83B17 /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18AC7B2629FE2700F83B17 /* ImageDownloadManager.swift */; };
 		8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2938EA261F3F6000A91741 /* EntryCell.swift */; };
 		8D2938ED261F3F6000A91741 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2938EB261F3F6000A91741 /* EntryCell.xib */; };
 		8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4B261CA05C009A7EA9 /* AppDelegate.swift */; };
@@ -46,6 +49,9 @@
 		8D03E11F2620892900C3E918 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		8D18AC5E2629B92800F83B17 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D18AC632629BCD400F83B17 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
+		8D18AC682629FBF600F83B17 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		8D18AC6D2629FC7200F83B17 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		8D18AC7B2629FE2700F83B17 /* ImageDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
 		8D2938EA261F3F6000A91741 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		8D2938EB261F3F6000A91741 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		8D4AED48261CA05C009A7EA9 /* Reddiget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddiget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +201,10 @@
 		8D4AED82261CA3AC009A7EA9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8D18AC6D2629FC7200F83B17 /* ImageDownloader.swift */,
 				8D03E11F2620892900C3E918 /* Box.swift */,
+				8D18AC682629FBF600F83B17 /* UIKit+Extensions.swift */,
+				8D18AC7B2629FE2700F83B17 /* ImageDownloadManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -344,8 +353,11 @@
 				8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */,
 				8D4AED4E261CA05C009A7EA9 /* SceneDelegate.swift in Sources */,
 				8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */,
+				8D18AC6E2629FC7200F83B17 /* ImageDownloader.swift in Sources */,
+				8D18AC7C2629FE2700F83B17 /* ImageDownloadManager.swift in Sources */,
 				8D03E1202620892900C3E918 /* Box.swift in Sources */,
 				8D18AC5F2629B92800F83B17 /* MainViewController.swift in Sources */,
+				8D18AC692629FBF600F83B17 /* UIKit+Extensions.swift in Sources */,
 				8D4CFF8C261DF2BD008757AA /* RedditService.swift in Sources */,
 				8D18AC642629BCD400F83B17 /* EntryDetailViewController.swift in Sources */,
 				8D4CFF91261DF90F008757AA /* RedditData.swift in Sources */,

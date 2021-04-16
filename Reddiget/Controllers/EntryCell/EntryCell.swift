@@ -30,6 +30,7 @@ class EntryCell: UITableViewCell {
     
     func setup(with entryData: EntryData?) {
         if let entryData = entryData {
+            thumbnailImageView.setImage(url: entryData.thumbnail, placeholderImage: #imageLiteral(resourceName: "placeholderImage"))
             autorLabel.text = entryData.author
             createdLabel.text = createdDateText(from: entryData.created)
             titleLabel.text = entryData.title

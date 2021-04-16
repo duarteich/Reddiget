@@ -34,6 +34,7 @@ class EntryDetailViewController: UIViewController {
             titleLabel.isHidden = false
             titleLabel.text = entryData.title
             imageView.isHidden = false
+            imageView.setImage(url: entryData.thumbnail, placeholderImage: #imageLiteral(resourceName: "placeholderImage"))
         }
     }
 }

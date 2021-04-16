@@ -15,6 +15,8 @@ struct RedditData: Decodable {
 struct ListingData: Decodable {
     
     let children: [Entry]
+    let after: String?
+    let before: String?
 }
 
 struct Entry: Decodable {

@@ -13,6 +13,7 @@ class TopEntriesViewController: UIViewController {
     
     private let viewModel = TopEntriesViewModel()
     private var entries = [Entry]()
+    private var allEntriesLoaded = false
     
     //MARK: - Outlets
     
@@ -30,11 +31,15 @@ class TopEntriesViewController: UIViewController {
         setupTableView()
         viewModel.entries.bind { [weak self] entries in
             guard let self = self else { return }
-            self.entries = entries
-            self.tableView.isHidden = self.entries.isEmpty
-            self.activityIndicatorView.isHidden = !self.entries.isEmpty
-            self.tableView.reloadData()
+            self.entries.append(contentsOf: entries)
+            self.activityIndicatorView.stopAnimating()
+            if !entries.isEmpty {
+                self.tableView.isHidden = false
+                self.tableView.reloadData()
+            }
         }
+        activityIndicatorView.startAnimating()
+        viewModel.fetchTopEntries()
     }
     
     private func setupTableView() {
@@ -50,6 +55,9 @@ class TopEntriesViewController: UIViewController {
 
 extension TopEntriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if entries.count == viewModel.totalEntries {
+            allEntriesLoaded = true
+        }
         return entries.count
     }
     
@@ -57,12 +65,19 @@ extension TopEntriesViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: EntryCell.identifier, for: indexPath) as? EntryCell else {
             fatalError("The dequeued cell is not an instance  of EntryCell")
         }
+
         let entryData = entries[indexPath.row].data
         cell.setup(with: entryData)
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if entries.count < viewModel.totalEntries {
+            if indexPath.row == entries.count / 2 {
+                viewModel.fetchTopEntries()
+            }
+        }
+    }
 }
 
 //MARK: - UITableViewDelegate
@@ -70,4 +85,5 @@ extension TopEntriesViewController: UITableViewDataSource {
 extension TopEntriesViewController: UITableViewDelegate {
     
 }
+
 

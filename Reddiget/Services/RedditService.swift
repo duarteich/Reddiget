@@ -19,15 +19,15 @@ class RedditService {
     
     private static let host = "reddit.com"
     private static let path = "/top.json"
-    private static let limit = "10"
+    static let limit = 10
     
     static func topEntries(after: String?, completion: @escaping RedditDataCompletion) {
         var urlBuilder = URLComponents()
         urlBuilder.scheme = "https"
         urlBuilder.host = host
         urlBuilder.path = path
-        urlBuilder.queryItems = [URLQueryItem(name: "limit", value: limit)]
-        if let after = after {
+        urlBuilder.queryItems = [URLQueryItem(name: "limit", value: String(limit))]
+        if let after = after, !after.isEmpty {
             urlBuilder.queryItems?.append(URLQueryItem(name: "after", value: after))
         }
         

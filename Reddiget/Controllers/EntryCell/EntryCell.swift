@@ -28,11 +28,18 @@ class EntryCell: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
     
-    func setup(with entryData: EntryData) {
-        autorLabel.text = entryData.author
-        createdLabel.text = createdDateText(from: entryData.created)
-        titleLabel.text = entryData.title
-        commentsLabel.text =  entryData.numComments > 1 ? "\(entryData.numComments) comments" : "\(entryData.numComments) comment"
+    func setup(with entryData: EntryData?) {
+        if let entryData = entryData {
+            autorLabel.text = entryData.author
+            createdLabel.text = createdDateText(from: entryData.created)
+            titleLabel.text = entryData.title
+            commentsLabel.text =  entryData.numComments > 1 ? "\(entryData.numComments) comments" : "\(entryData.numComments) comment"
+        } else {
+            autorLabel.alpha = 0
+            createdLabel.alpha = 0
+            titleLabel.alpha = 0
+            commentsLabel.alpha = 0
+        }
     }
     
     func createdDateText(from timeInterval: TimeInterval) -> String {

@@ -10,12 +10,11 @@ import Foundation
 public class TopEntriesViewModel {
     
     let entries = Box([Entry]())
+    var indexPathsToReload: [IndexPath]?
+    var after = ""
+    let totalEntries = 50
     
-    init() {
-        fetchTopEntries()
-    }
-    
-    private func fetchTopEntries(after: String? = nil) {
+    func fetchTopEntries() {
         RedditService.topEntries(after: after) { [weak self] (redditData, error) in
             guard
               let self = self,
@@ -24,6 +23,7 @@ public class TopEntriesViewModel {
               return
             }
             self.entries.value = redditData.data.children
+            self.after = redditData.data.after ?? ""
         }
     }
 }

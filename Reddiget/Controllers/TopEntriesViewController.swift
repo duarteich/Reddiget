@@ -28,6 +28,7 @@ class TopEntriesViewController: UITableViewController {
         setupTableView()
         viewModel.entries.bind { [weak self] entries in
             guard let self = self else { return }
+            self.tableView.refreshControl?.endRefreshing()
             self.entries.append(contentsOf: entries)
             if !entries.isEmpty {
                 self.tableView.reloadData()
@@ -41,6 +42,22 @@ class TopEntriesViewController: UITableViewController {
         tableView.register(EntryCell.nib(), forCellReuseIdentifier: EntryCell.identifier)
         tableView.estimatedRowHeight = 180
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(resetEntryList), for: .valueChanged)
+    }
+    
+    @objc func resetEntryList() {
+        entries.removeAll()
+        tableView.reloadData()
+        allEntriesLoaded = false
+        viewModel.after = ""
+        viewModel.fetchTopEntries()
+    }
+    
+    @objc func dismissButtonClicked(sender: UIButton!) {
+        entries.remove(at: sender.tag)
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        tableView.deleteRows(at: [indexPath], with: .fade)
     }
 
     //MARK: - UITableViewDataSource
@@ -56,17 +73,25 @@ class TopEntriesViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: EntryCell.identifier, for: indexPath) as? EntryCell else {
             fatalError("The dequeued cell is not an instance  of EntryCell")
         }
-        
         let entryData = entries[indexPath.row].data
         cell.setup(with: entryData)
+        cell.dismissPostButton.tag = indexPath.row
+        cell.dismissPostButton.addTarget(self, action: #selector(dismissButtonClicked(sender:)), for: .touchUpInside)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if entries.count < viewModel.totalEntries {
+        if entries.count < viewModel.totalEntries && !allEntriesLoaded {
             if indexPath.row == entries.count / 2 {
                 viewModel.fetchTopEntries()
             }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            entries.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

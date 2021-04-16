@@ -10,7 +10,6 @@ import Foundation
 public class TopEntriesViewModel {
     
     let entries = Box([Entry]())
-    var indexPathsToReload: [IndexPath]?
     var after = ""
     let totalEntries = 50
     

@@ -68,9 +68,6 @@
                         <state key="normal" title="Dismiss Post" image="dismissIcon">
                             <color key="titleColor" systemColor="labelColor"/>
                         </state>
-                        <connections>
-                            <action selector="dismissPost:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v1z-3v-Mp7"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -98,6 +95,7 @@
                 <outlet property="autorLabel" destination="pHk-GS-1pd" id="mUU-ap-RTB"/>
                 <outlet property="commentsLabel" destination="rzY-ml-Ekt" id="avq-Eo-r7b"/>
                 <outlet property="createdLabel" destination="dj6-eM-CkB" id="ybw-U3-adH"/>
+                <outlet property="dismissPostButton" destination="dDb-yx-c6L" id="8X6-ct-vi4"/>
                 <outlet property="thumbnailImageView" destination="bx3-ha-ibS" id="4Pu-vC-10k"/>
                 <outlet property="titleLabel" destination="9ZH-rv-hqS" id="7i4-fy-UEh"/>
             </connections>

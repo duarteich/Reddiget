@@ -14,12 +14,8 @@ class EntryCell: UITableViewCell {
     @IBOutlet weak var createdLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dismissPostButton: UIButton!
     @IBOutlet weak var commentsLabel: UILabel!
-    
-    //MARK: - Actions
-    @IBAction func dismissPost(_ sender: UIButton) {
-        
-    }
     
     //MARK: - Properties
     static let identifier = "EntryCell"

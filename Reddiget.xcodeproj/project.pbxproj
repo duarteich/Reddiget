@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D03E1202620892900C3E918 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D03E11F2620892900C3E918 /* Box.swift */; };
+		8D18AC5F2629B92800F83B17 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18AC5E2629B92800F83B17 /* MainViewController.swift */; };
+		8D18AC642629BCD400F83B17 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D18AC632629BCD400F83B17 /* EntryDetailViewController.swift */; };
 		8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2938EA261F3F6000A91741 /* EntryCell.swift */; };
 		8D2938ED261F3F6000A91741 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2938EB261F3F6000A91741 /* EntryCell.xib */; };
 		8D4AED4C261CA05C009A7EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4AED4B261CA05C009A7EA9 /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		8D03E11F2620892900C3E918 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		8D18AC5E2629B92800F83B17 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8D18AC632629BCD400F83B17 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		8D2938EA261F3F6000A91741 /* EntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCell.swift; sourceTree = "<group>"; };
 		8D2938EB261F3F6000A91741 /* EntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
 		8D4AED48261CA05C009A7EA9 /* Reddiget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reddiget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +161,8 @@
 			children = (
 				8D2938E9261F3F2900A91741 /* EntryCell */,
 				8D4AED4F261CA05C009A7EA9 /* TopEntriesViewController.swift */,
+				8D18AC5E2629B92800F83B17 /* MainViewController.swift */,
+				8D18AC632629BCD400F83B17 /* EntryDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -339,7 +345,9 @@
 				8D4AED4E261CA05C009A7EA9 /* SceneDelegate.swift in Sources */,
 				8D2938EC261F3F6000A91741 /* EntryCell.swift in Sources */,
 				8D03E1202620892900C3E918 /* Box.swift in Sources */,
+				8D18AC5F2629B92800F83B17 /* MainViewController.swift in Sources */,
 				8D4CFF8C261DF2BD008757AA /* RedditService.swift in Sources */,
+				8D18AC642629BCD400F83B17 /* EntryDetailViewController.swift in Sources */,
 				8D4CFF91261DF90F008757AA /* RedditData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
